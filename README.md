@@ -28,7 +28,7 @@ npm install
 
 # Rode o servidor de desenvolvimento
 npm run dev
-
+```
 ## Desenvolvedores 
 Daniela Dos Santos Alves 
 Giovani Gabriel Mendes Ohira de Rossi
