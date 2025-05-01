@@ -21,6 +21,11 @@ Sistema baseado em arquitetura cliente-servidor:
 - **Frontend:** React.js utilizando JavaScript.
 - **Backend:** Responsável pelo armazenamento, manipulação e fornecimento dos dados, utilizando Node.js (com Express) e SQLite como banco de dados.
 
+## Diagrama da Arquitetura
+
+O diagrama abaixo ilustra a arquitetura completa do sistema, mostrando o fluxo de dados e a interação entre os componentes:
+![image_2025-05-01_175847717](https://github.com/user-attachments/assets/0bf5f27c-c2e3-4076-aae3-4d5fc912a3d0)
+
 ## Como executar o projeto
 ```bash
 # Instale as dependências
