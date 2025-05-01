@@ -30,5 +30,5 @@ npm install
 npm run dev
 ```
 ## Desenvolvedores 
-Daniela Dos Santos Alves 
-Giovani Gabriel Mendes Ohira de Rossi
+- Daniela Dos Santos Alves 2465728
+- Giovani Gabriel Mendes Ohira de Rossi 2454360
