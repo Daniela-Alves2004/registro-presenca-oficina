@@ -31,9 +31,36 @@ O diagrama abaixo ilustra a arquitetura completa do sistema, mostrando o fluxo d
 # Instale as dependências
 npm install
 
-# Rode o servidor de desenvolvimento
+# Abra um terminal e inicie o backend.
+npm run backend
+
+# Abra um segundo terminal e inicie o frontend.
 npm run dev
 ```
 ## Desenvolvedores 
 - Daniela Dos Santos Alves 2465728
 - Giovani Gabriel Mendes Ohira de Rossi 2454360
+
+### Sprint 1 ###
+- Implementação das funcionalidades principais do sistema.
+- Desenvolvimento do banco de dados.
+  
+#### Sprint 2 ###
+-  Implementação e automatização de testes.
+  
+### Responsabilidades por Desenvolvedor
+**Daniela Dos Santos Alves**
+- Criação do esquema e estrutura do banco de dados (schema, init)
+- Implementação da API e lógica do backend para oficinas, participantes e presenças
+- Desenvolvimento da página de participantes e seus componentes
+- Criação de componentes da interface: Modal, Navbar, Dashboard
+- Organização da estrutura geral do projeto
+- Inclusão do diagrama de arquitetura do sistema
+  
+**Giovani Gabriel Mendes Ohira de Rossi**
+
+- Criação e configuração das rotas da aplicação
+- Desenvolvimento das páginas de oficinas e presenças, incluindo os componentes WorkshopDetails e Attendance
+- Implementação da configuração do banco e rotas da API
+- Configuração do ambiente de testes com Jest
+- Criação de arquivos de configuração do sistema
