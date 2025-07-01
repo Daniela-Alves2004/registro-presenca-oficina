@@ -47,6 +47,20 @@ router.post('/', async (req, res) => {
     return res.status(400).json({ error: 'Campos obrigatórios faltando.' });
   }
 
+  // Validação de formato
+  const emailRegex = /^[\w-.]+@[\w-]+\.[a-zA-Z]{2,}$/;
+  const phoneRegex = /^\d{10,11}$/; // Ex: 41999999999
+  const cpfRegex = /^\d{11}$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ error: 'Formato de email inválido.' });
+  }
+  if (!phoneRegex.test(phone)) {
+    return res.status(400).json({ error: 'Formato de telefone inválido. Use apenas números com DDD.' });
+  }
+  if (!cpfRegex.test(cpf)) {
+    return res.status(400).json({ error: 'Formato de CPF inválido. Use apenas 11 dígitos.' });
+  }
+
   try {
     // Verificar se o CPF já existe
     const existingParticipantCPF = await getParticipantByCpfQuery(cpf);
@@ -72,6 +86,17 @@ router.post('/', async (req, res) => {
 // Atualizar participante
 router.put('/:id', async (req, res) => {
   const { name, email, phone, type } = req.body;
+
+  // Validação de formato (apenas se os campos forem enviados)
+  const emailRegex = /^[\w-.]+@[\w-]+\.[a-zA-Z]{2,}$/;
+  const phoneRegex = /^\d{10,11}$/;
+  if (email && !emailRegex.test(email)) {
+    return res.status(400).json({ error: 'Formato de email inválido.' });
+  }
+  if (phone && !phoneRegex.test(phone)) {
+    return res.status(400).json({ error: 'Formato de telefone inválido. Use apenas números com DDD.' });
+  }
+
   try {
     await updateParticipantQuery(req.params.id, name, email, phone, type);
     const participant = await getParticipantByIdQuery(req.params.id);
